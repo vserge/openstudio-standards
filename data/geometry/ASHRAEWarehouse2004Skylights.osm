@@ -1,0 +1,236 @@
+OS:Version,
+  {990ad3eb-26e2-4b85-9afc-9f5896fc040e}, !- Handle
+  2.2.1;                                  !- Version Identifier
+  
+OS:BuildingStory,
+  {db75d8b1-6332-4998-b7c2-ad46d4bbd08b}, !- Handle
+  Building Story 1,                       !- Name
+  0,                                      !- Nominal Z Coordinate {m}
+  ,                                       !- Nominal Floor to Floor Height {m}
+  ,                                       !- Default Construction Set Name
+  ,                                       !- Default Schedule Set Name
+  ;                                       !- Group Rendering Name
+
+OS:Building,
+  {c23ded4b-6f18-4e30-b6db-cc00e1198751}, !- Handle
+  Warehouse,                              !- Name
+  ,                                       !- Building Sector Type
+  ,                                       !- North Axis {deg}
+  ,                                       !- Nominal Floor to Floor Height {m}
+  ,                                       !- Space Type Name
+  ,                                       !- Default Construction Set Name
+  ,                                       !- Default Schedule Set Name
+  1,                                      !- Standards Number of Stories
+  1,                                      !- Standards Number of Above Ground Stories
+  Warehouse;                              !- Standards Building Type
+
+OS:ThermalZone,
+  {1833e257-ca02-4033-b7e1-a9b7f59c4fbe}, !- Handle
+  Warehouse,                              !- Name
+  ,                                       !- Multiplier
+  ,                                       !- Ceiling Height {m}
+  ,                                       !- Volume {m3}
+  ,                                       !- Floor Area {m2}
+  ,                                       !- Zone Inside Convection Algorithm
+  ,                                       !- Zone Outside Convection Algorithm
+  ,                                       !- Zone Conditioning Equipment List Name
+  ,                                       !- Zone Air Inlet Port List
+  ,                                       !- Zone Air Exhaust Port List
+  ,                                       !- Zone Air Node Name
+  ,                                       !- Zone Return Air Node Name
+  ,                                       !- Primary Daylighting Control Name
+  ,                                       !- Fraction of Zone Controlled by Primary Daylighting Control
+  ,                                       !- Secondary Daylighting Control Name
+  ,                                       !- Fraction of Zone Controlled by Secondary Daylighting Control
+  ,                                       !- Illuminance Map Name
+  ,                                       !- Group Rendering Name
+  ,                                       !- Thermostat Name
+  No;                                     !- Use Ideal Air Loads 
+ 
+OS:Surface,
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Handle
+  Bulk Storage Roof,                      !- Name
+  RoofCeiling,                            !- Surface Type
+  ,                                       !- Construction Name
+  {39655c19-15b3-4081-92c2-4613ae84d8e6}, !- Space Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  ,                                       !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  45.7177703814647, 30.4785135876431, 8.53398380454007, !- X,Y,Z Vertex 1 {m}
+  45.7177703814647, 100.579094839222, 8.53398380454007, !- X,Y,Z Vertex 2 {m}
+  0, 100.579094839222, 8.53398380454007,  !- X,Y,Z Vertex 3 {m}
+  0, 30.4785135876431, 8.53398380454007;  !- X,Y,Z Vertex 4 {m}
+ 
+OS:SubSurface,
+  {f7eb451a-be29-468e-8f97-c66b62ca8e90}, !- Handle
+  Skylight_R1C1,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.6576, 32.916914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  3.6576, 34.136114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  2.4384, 34.136114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  2.4384, 32.916914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {57eac659-f23e-4c7a-a26c-800c01762680}, !- Handle
+  Skylight_R1C2,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.6576, 39.012914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  3.6576, 40.232114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  2.4384, 40.232114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  2.4384, 39.012914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {845304c7-4fdf-4980-a668-460de0675243}, !- Handle
+  Skylight_R1C3,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.6576, 45.108914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  3.6576, 46.328114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  2.4384, 46.328114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  2.4384, 45.108914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {36542de3-cae6-4f3a-8492-36979a7b0ed7}, !- Handle
+  Skylight_R1C4,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.6576, 51.204914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  3.6576, 52.424114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  2.4384, 52.424114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  2.4384, 51.204914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2f3aa6b9-56da-4055-9ecc-b78bcd52711d}, !- Handle
+  Skylight_R1C5,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.6576, 57.300914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  3.6576, 58.520114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  2.4384, 58.520114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  2.4384, 57.300914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {677bf157-ca1d-47b0-9fde-9f2f1c0a9ba2}, !- Handle
+  Skylight_R2C1,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  9.7536, 32.916914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  9.7536, 34.136114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  8.5344, 34.136114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  8.5344, 32.916914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {a8c4be0d-ff38-4b1d-bbbf-7e8e039c4e05}, !- Handle
+  Skylight_R2C2,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  9.7536, 39.012914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  9.7536, 40.232114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  8.5344, 40.232114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  8.5344, 39.012914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {0810e707-bbf1-4fe8-88d4-753bbbf14e03}, !- Handle
+  Skylight_R2C3,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  9.7536, 45.108914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  9.7536, 46.328114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  8.5344, 46.328114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  8.5344, 45.108914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {798d8a5c-d6b2-4394-a3ff-3b8293f2fa19}, !- Handle
+  Skylight_R2C4,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  9.7536, 51.204914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  9.7536, 52.424114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  8.5344, 52.424114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  8.5344, 51.204914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {f1f4abb5-eb6f-4907-91a0-98957fb255cd}, !- Handle
+  Skylight_R2C5,                          !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {516ff702-eb03-4a25-9228-e1ad9dc5895c}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  9.7536, 57.300914, 8.53398380454007,    !- X,Y,Z Vertex 1 {m}
+  9.7536, 58.520114, 8.53398380454007,    !- X,Y,Z Vertex 2 {m}
+  8.5344, 58.520114, 8.53398380454007,    !- X,Y,Z Vertex 3 {m}
+  8.5344, 57.300914, 8.53398380454007;    !- X,Y,Z Vertex 4 {m}
+

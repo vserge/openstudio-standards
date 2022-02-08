@@ -1,0 +1,218 @@
+OS:Version,
+  {990ad3eb-26e2-4b85-9afc-9f5896fc040e}, !- Handle
+  2.2.1;                                  !- Version Identifier
+  
+OS:BuildingStory,
+  {db75d8b1-6332-4998-b7c2-ad46d4bbd08b}, !- Handle
+  Building Story 1,                       !- Name
+  0,                                      !- Nominal Z Coordinate {m}
+  ,                                       !- Nominal Floor to Floor Height {m}
+  ,                                       !- Default Construction Set Name
+  ,                                       !- Default Schedule Set Name
+  ;                                       !- Group Rendering Name
+
+OS:Building,
+  {c23ded4b-6f18-4e30-b6db-cc00e1198751}, !- Handle
+  PrimarySchool,                          !- Name
+  ,                                       !- Building Sector Type
+  ,                                       !- North Axis {deg}
+  ,                                       !- Nominal Floor to Floor Height {m}
+  ,                                       !- Space Type Name
+  ,                                       !- Default Construction Set Name
+  ,                                       !- Default Schedule Set Name
+  1,                                      !- Standards Number of Stories
+  1,                                      !- Standards Number of Above Ground Stories
+  School;                                 !- Standards Building Type
+
+OS:ThermalZone,
+  {1833e257-ca02-4033-b7e1-a9b7f59c4fbe}, !- Handle
+  PrimarySchool,                          !- Name
+  ,                                       !- Multiplier
+  ,                                       !- Ceiling Height {m}
+  ,                                       !- Volume {m3}
+  ,                                       !- Floor Area {m2}
+  ,                                       !- Zone Inside Convection Algorithm
+  ,                                       !- Zone Outside Convection Algorithm
+  ,                                       !- Zone Conditioning Equipment List Name
+  ,                                       !- Zone Air Inlet Port List
+  ,                                       !- Zone Air Exhaust Port List
+  ,                                       !- Zone Air Node Name
+  ,                                       !- Zone Return Air Node Name
+  ,                                       !- Primary Daylighting Control Name
+  ,                                       !- Fraction of Zone Controlled by Primary Daylighting Control
+  ,                                       !- Secondary Daylighting Control Name
+  ,                                       !- Fraction of Zone Controlled by Secondary Daylighting Control
+  ,                                       !- Illuminance Map Name
+  ,                                       !- Group Rendering Name
+  ,                                       !- Thermostat Name
+  No;                                     !- Use Ideal Air Loads
+
+OS:Surface,
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling,                 !- Name
+  RoofCeiling,                            !- Surface Type
+  ,                                       !- Construction Name
+  {4aaa835d-a9e6-4dbd-b819-d509a82b4fb9}, !- Space Name
+  Outdoors,                               !- Outside Boundary Condition
+  ,                                       !- Outside Boundary Condition Object
+  SunExposed,                             !- Sun Exposure
+  WindExposed,                            !- Wind Exposure
+  ,                                       !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  21, 0, 4,                               !- X,Y,Z Vertex 1 {m}
+  21, 17, 4,                              !- X,Y,Z Vertex 2 {m}
+  0, 17, 4,                               !- X,Y,Z Vertex 3 {m}
+  0, 0, 4;                                !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {4ad4a147-1ab7-493d-8dca-7a37db802fa4}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_1,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  2.8904, 2.2237, 4,                      !- X,Y,Z Vertex 1 {m}
+  4.1096, 2.2237, 4,                      !- X,Y,Z Vertex 2 {m}
+  4.1096, 3.4429, 4,                       !- X,Y,Z Vertex 3 {m}
+  2.8904, 3.4429, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {4ad4a197-8ab7-49f9-8cca-7037db802fb4}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_2,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  9.8904, 2.2237, 4,                      !- X,Y,Z Vertex 1 {m}
+  11.1096, 2.2237, 4,                      !- X,Y,Z Vertex 2 {m}
+  11.1096, 3.4429, 4,                       !- X,Y,Z Vertex 3 {m}
+  9.8904, 3.4429, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {4ad4a127-8ac7-19f9-8ccd-7237db102fb4}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_3,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  16.8904, 2.2237, 4,                      !- X,Y,Z Vertex 1 {m}
+  18.1096, 2.2237, 4,                      !- X,Y,Z Vertex 2 {m}
+  18.1096, 3.4429, 4,                       !- X,Y,Z Vertex 3 {m}
+  16.8904, 3.4429, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {4ad4b137-8ad7-19f2-5ccd-5237db102fe4}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_4,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  2.8904, 7.8904, 4,                      !- X,Y,Z Vertex 1 {m}
+  4.1096, 7.8904, 4,                      !- X,Y,Z Vertex 2 {m}
+  4.1096, 9.1096, 4,                       !- X,Y,Z Vertex 3 {m}
+  2.8904, 9.1096, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2ad4b127-8ac7-16f2-5c2d-5117db102fe4}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_5,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  9.8904, 7.8904, 4,                      !- X,Y,Z Vertex 1 {m}
+  11.1096, 7.8904, 4,                      !- X,Y,Z Vertex 2 {m}
+  11.1096, 9.1096, 4,                       !- X,Y,Z Vertex 3 {m}
+  9.8904, 9.1096, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2ad4b144-8dd7-12e2-5d2d-5237db101fe4}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_6,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  16.8904, 7.8904, 4,                      !- X,Y,Z Vertex 1 {m}
+  18.1096, 7.8904, 4,                      !- X,Y,Z Vertex 2 {m}
+  18.1096, 9.1096, 4,                       !- X,Y,Z Vertex 3 {m}
+  16.8904, 9.1096, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2ad4c142-8fd7-1fe2-5dfd-5237fb101ce2}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_7,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  2.8904, 13.5571, 4,                      !- X,Y,Z Vertex 1 {m}
+  4.1096, 13.5571, 4,                      !- X,Y,Z Vertex 2 {m}
+  4.1096, 14.7763, 4,                       !- X,Y,Z Vertex 3 {m}
+  2.8904, 14.7763, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2ad4c172-2fd7-10e2-5d0d-5c37fb102ce2}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_8,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  9.8904, 13.5571, 4,                      !- X,Y,Z Vertex 1 {m}
+  11.1096, 13.5571, 4,                      !- X,Y,Z Vertex 2 {m}
+  11.1096, 14.7763, 4,                       !- X,Y,Z Vertex 3 {m}
+  9.8904, 14.7763, 4;                       !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2ad2a172-2f32-13e2-530d-5c37fb332ce2}, !- Handle
+  Gym_ZN_1_FLR_1_Ceiling_skylight_9,             !- Name
+  Skylight,                               !- Sub Surface Type
+  ,                                       !- Construction Name
+  {858988b8-1945-478c-ba3b-022d651d9144}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  1,                                      !- Multiplier
+  ,                                       !- Number of Vertices
+  16.8904, 13.5571, 4,                      !- X,Y,Z Vertex 1 {m}
+  18.1096, 13.5571, 4,                      !- X,Y,Z Vertex 2 {m}
+  18.1096, 14.7763, 4,                       !- X,Y,Z Vertex 3 {m}
+  16.8904, 14.7763, 4;                       !- X,Y,Z Vertex 4 {m}

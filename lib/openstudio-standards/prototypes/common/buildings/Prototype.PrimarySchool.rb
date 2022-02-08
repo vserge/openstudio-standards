@@ -115,6 +115,10 @@ module PrimarySchool
   def model_custom_geometry_tweaks(model, building_type, climate_zone, prototype_input)
     # Set original building North axis
     model_set_building_north_axis(model, 0.0)
+
+    OpenStudio.logFree(OpenStudio::Info, 'openstudio.prototype.PrimarySchool', 'Adding skylights.')
+    model_add_skylights(model, 'geometry/ASHRAEPrimarySchoolSkylights.osm')
+
     return true
   end
 

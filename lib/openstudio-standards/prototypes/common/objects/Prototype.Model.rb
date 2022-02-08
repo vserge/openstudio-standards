@@ -2700,7 +2700,6 @@ Standard.class_eval do
   # @param wwr [Boolean]
   # @return [Numeric] Returns window to wall ratio (percentage) or window area.
   def model_get_window_area_info(model, wwr = true)
-
     window_area = 0
     wall_area = 0
 
@@ -2951,5 +2950,27 @@ Standard.class_eval do
   # @return [Boolean] true if success
   def space_occupancy_standby_mode(thermostat)
     return false
+  end
+
+  # Add skylights contained in an OSM file to the model
+  #
+  # @param model [OpenStudio::model::Model] Openstudio model object
+  # @param path_to_osm [String] path to OSM file containing the skylights
+  # @return [Boolean] true if success
+  def model_add_skylights(model, path_to_osm)
+    skylights = load_geometry_osm(path_to_osm)
+    skylights.getSubSurfaces.each do |subsurf|
+      if subsurf.subSurfaceType.to_s == 'Skylight'
+        new_skylight = subsurf.clone(model).to_SubSurface.get
+        old_roof = subsurf.surface.get
+        # Assign surfaces to skylights
+        model.getSurfaces.each do |model_surf|
+          if model_surf.name.to_s == old_roof.name.to_s
+            new_skylight.setSurface(model_surf)
+          end
+        end
+      end
+    end
+    return true
   end
 end

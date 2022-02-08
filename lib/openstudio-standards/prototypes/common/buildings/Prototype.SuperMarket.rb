@@ -134,6 +134,9 @@ module SuperMarket
   # @param prototype_input [Hash] hash of prototype inputs
   # @return [Bool] returns true if successful, false if not
   def model_custom_geometry_tweaks(model, building_type, climate_zone, prototype_input)
+    OpenStudio.logFree(OpenStudio::Info, 'openstudio.prototype.SuperMarket', 'Adding skylights.')
+    model_add_skylights(model, 'geometry/ASHRAESuperMarketSkylights.osm')
+
     return true
   end
 end

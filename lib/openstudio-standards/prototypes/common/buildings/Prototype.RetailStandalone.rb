@@ -138,7 +138,7 @@ module RetailStandalone
     # Set original building North axis
     model_set_building_north_axis(model, 0.0)
 
-    OpenStudio.logFree(OpenStudio::Info, 'openstudio.model.Model', 'Adjusting geometry input')
+    OpenStudio.logFree(OpenStudio::Info, 'openstudio.prototype.RetailStandalone', 'Adding skylights.')
     case template
     when '90.1-2010', '90.1-2013', '90.1-2016', '90.1-2019'
       case climate_zone
@@ -150,28 +150,12 @@ module RetailStandalone
           'ASHRAE 169-2013-6B',
           'ASHRAE 169-2013-7A',
           'ASHRAE 169-2013-8A'
-        # Remove existing skylights
-        model.getSubSurfaces.each do |subsurf|
-          if subsurf.subSurfaceType.to_s == 'Skylight'
-            subsurf.remove
-          end
-        end
-        # Load older geometry corresponding to older code versions
-        old_geo = load_geometry_osm('geometry/ASHRAE90120042007RetailStandalone.osm')
-        # Clone the skylights from the older geometry
-        old_geo.getSubSurfaces.each do |subsurf|
-          if subsurf.subSurfaceType.to_s == 'Skylight'
-            new_skylight = subsurf.clone(model).to_SubSurface.get
-            old_roof = subsurf.surface.get
-            # Assign surfaces to skylights
-            model.getSurfaces.each do |model_surf|
-              if model_surf.name.to_s == old_roof.name.to_s
-                new_skylight.setSurface(model_surf)
-              end
-            end
-          end
-        end
+        model_add_skylights(model, 'geometry/ASHRAERetailStandalone2004Skylights.osm')
+      else
+        model_add_skylights(model, 'geometry/ASHRAERetailStandalone2010Skylights.osm')
       end
+    else
+      model_add_skylights(model, 'geometry/ASHRAERetailStandalone2004Skylights.osm')
     end
     return true
   end
